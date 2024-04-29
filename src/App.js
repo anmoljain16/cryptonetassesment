@@ -3,9 +3,8 @@ import Card from "./components/Card";
 
 async function getUsers(){
     try{
-        const response = await fetch('https://randomuser.me/api/?page=1&results=1&seed=abc').then(response => response.json());
+        return await fetch('https://randomuser.me/api/?page=1&results=1&seed=abc').then(response => response.json());
 
-        return response;
     }catch (e) {
         return {
             error: true,
@@ -34,7 +33,7 @@ export default function App() {
         )
 
         console.log(users)
-    },[])
+    })
 
     if(loading){
         return <h1>Loading...</h1>
