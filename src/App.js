@@ -33,7 +33,7 @@ export default function App() {
         )
 
         console.log(users)
-    },[users])
+    },[])
 
     if(loading){
         return <h1>Loading...</h1>
